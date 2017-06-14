@@ -11,4 +11,5 @@ class AuthenticationController < ApplicationController
   def auth_params
     params.permit(:email, :password)
   end
+  skip_before_action :authorize_request, only: :authenticate
 end

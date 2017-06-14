@@ -18,4 +18,5 @@ class UsersController < ApplicationController
       :password_confirmation
     )
   end
+  skip_before_action :authorize_request, only: :authenticate
 end
